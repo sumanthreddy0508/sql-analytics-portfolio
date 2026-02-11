@@ -1,1 +1,47 @@
+--------Understand Core Concepts-----
+SQL
+Structured Query Language
+is used to:
+Store data
+Retrieve data
+Analyze data
+Modify data
 
+Used in:
+Data Analyst roles → Reporting, KPIs
+Data Engineer roles → Pipelines, transformations
+
+Important terms in SQL with an example
+| customer_id | name | city    |
+| ----------- | ---- | ------- |
+| 1           | John | Toronto |
+
+Customer_id: is field or column
+ whereas,row is called as record
+Primary Key	Unique identifier-->Customer_id
+Foreign Key	Link between tables
+--->>>>>>A Relational Database Management System (RDBMS)<<<<-----------
+is software that manages,stores, and retrieves data organized in rows and columns within tables, 
+allowing for relationships between data points. It is the foundation for SQL-based,
+structured data management, ensuring data integrity and allowing efficient 
+CRUD operations (Create, Read, Update, Delete). Common examples include MySQL, PostgreSQL, Oracle, and MS SQL Server. 
+
+
+=============>>>DAY1 PRACTICE>>>>>>>==================
+create database sql_practice;
+USE sql_practice;
+
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary INT
+);
+
+INSERT INTO employees VALUES
+(1, 'Alice', 'IT', 60000),
+(2, 'Bob', 'HR', 50000),
+(3, 'Charlie', 'IT', 70000),
+(4, 'David', 'Finance', 65000);
+
+SELECT * FROM employees;
