@@ -1,0 +1,47 @@
+SQL Joins (INNER JOIN)
+1️⃣ What is INNER JOIN?
+
+INNER JOIN returns only the matching rows from both tables based on a related column.
+
+Think of it like:
+
+Table A → Employees
+
+Table B → Departments
+
+The common column → department_id
+
+Only employees that have a matching department will appear in the result.
+
+2️⃣ Example Tables
+Employees Table
+employee_id	name	department_id
+1	John	101
+2	Sarah	102
+3	Mike	103
+4	Anna	101
+Departments Table
+department_id	department_name
+101	HR
+102	IT
+103	Finance
+3️⃣ INNER JOIN Syntax
+SELECT column_names
+FROM table1
+INNER JOIN table2
+ON table1.common_column = table2.common_column;
+
+
+SELECT employees.name, departments.department_name
+FROM employees
+INNER JOIN departments
+on employee.department_id=departments.department_id;
+
+
+output
+name	department_name
+John	HR
+Sarah	IT
+Mike	Finance
+Anna	HR
+ON employees.department_id = departments.department_id;
